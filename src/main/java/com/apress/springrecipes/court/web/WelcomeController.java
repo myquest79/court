@@ -8,14 +8,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/welcome")
 public class WelcomeController 
 {
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value={"/welcome"}, method=RequestMethod.GET)
 	public String welcome(Model model)
 	{
 		Date today = new Date();
 		model.addAttribute("today", today);
 		return "welcome";
+	}
+	
+	@RequestMapping(value={"/welcomeRedirect1"}, method=RequestMethod.GET)
+	public void welcomeRedirect1()
+	{
+		System.out.println("#####Welcome Redirect 1#####");
+	}
+	
+	@RequestMapping(value={"/welcomeRedirect2"}, method=RequestMethod.GET)
+	public void welcomeRedirect2()
+	{
+		System.out.println("#####Welcome Redirect 2#####");
 	}
 }
