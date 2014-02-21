@@ -1,4 +1,12 @@
+# Ignore Dirs #
+/target
+
+# Compiled Files #
 *.class
+
+# Config Files #
+.project
+.classpath
 
 # Package Files #
 *.jar
