@@ -12,11 +12,20 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <servlet-api.version>2.5</servlet-api.version>
     <spring.version>3.2.7.RELEASE</spring.version>
     <maven-war-plugin.version>2.4</maven-war-plugin.version>
   </properties>
 
-  <dependencies>      
+  <dependencies>
+    <!-- Servlet API -->
+    <dependency>
+	  <groupId>javax.servlet</groupId>
+	  <artifactId>servlet-api</artifactId>
+	  <version>${servlet-api.version}</version>
+	  <scope>provided</scope>
+    </dependency>
+    
   	<!-- Spring Dependencies -->
   	<dependency>
   	  <groupId>org.springframework</groupId>
